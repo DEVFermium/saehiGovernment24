@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html>
+    <meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; minimum-scale=1.0; user-scalable=no;" />
+    <meta name="mobile-web-app-capable" content="yes"> <link rel="manifest" href="/manifest.json">
+    <script>
+         if (document.documentElement.requestFullscreen) {
+            document.documentElement.requestFullscreen();
+        } else if (document.documentElement.mozRequestFullScreen) { /* Firefox */
+            document.documentElement.mozRequestFullScreen();
+        } else if (document.documentElement.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+            document.documentElement.webkitRequestFullscreen();
+        } else if (document.documentElement.msRequestFullscreen) { /* IE/Edge */
+            document.documentElement.msRequestFullscreen();
+        }
+        let leftt = 29
+        playAlert = setInterval(function() {
+           if(leftt>=0){
+            document.getElementById('lefttimenum').innerText = String(leftt) + '초'
+           leftt = leftt - 1
+           }
+        }, 1000);
+    </script>
+    <style>
+        @font-face { font-family: 'NanumGothic';src: url('/fonts/NanumGothic.eot');src: url('/fonts/NanumGothic.eot') format('embedded-opentype'),url('/fonts/NanumGothic.woff') format('woff');}
+        @font-face {
+    font-family: 'Pretendard';
+    font-weight: 100;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Thin.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Thin.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Thin.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Thin.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Thin.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 200;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-ExtraLight.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-ExtraLight.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-ExtraLight.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-ExtraLight.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 300;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Light.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Light.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Light.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Light.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Light.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 500;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Medium.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Medium.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Medium.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Medium.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Medium.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 600;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 800;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-ExtraBold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-ExtraBold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-ExtraBold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-ExtraBold.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 900;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Black.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Black.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Black.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Black.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Black.ttf') format("truetype");
+    font-display: swap;
+}
+
+        @-webkit-keyframes moveleft {
+        0% {
+            left:0vw;
+        }
+        100% {
+            left:-500vw;
+        }
+        }
+        @-webkit-keyframes bar {
+        0% {
+            width: 75vw;
+        }
+        100% {
+            width: 0vw;
+        }
+        }
+        canvas#MainBackground {
+            background-color: rgb(255, 255, 255);
+            height: 200vh;
+            width: 100vw;
+            top: -20vh;
+            position: fixed;
+            top: 0%;
+            left:0%;
+            z-index: 0;
+        }
+        canvas#ServeBackground {
+            background-color: rgb(226, 235, 242);
+            width: 100vw;
+            height: 105vh;
+            top:-5vh;
+            position: fixed;
+            z-index: 1;
+            left: 0%;
+        }
+        img#logo {
+            height: 2.85vh;
+            z-index: 3;
+            position: fixed;
+            top: 9.7vh;
+            left: 5vw;
+        }
+        p#logoText {
+            position: fixed;
+            z-index: 3;
+            top: 9.7vh;
+            width: 50vw;
+            font-weight: bold;
+            font-size: 3.645vw;
+            left: 13vw;
+            top: 8.2vh;
+            color: rgb(68, 71, 80);
+            font-family: 'Pretendard';
+        }
+        canvas#captureNo {
+            position: fixed;
+            z-index: 3;
+            height: 2.85vh;
+            width: 100vw;
+            bottom: 3.42vh;
+            left: 0vw;
+            background: linear-gradient(45deg,rgb(26,183,205),rgb(140, 81, 242));
+        }
+        p#text1 {
+            position: fixed;
+            z-index: 4;
+            color: rgba(255, 255, 255, 0.5);
+            bottom: 2.8vh;
+            font-weight: lighter;
+            width: 1000vw;
+            font-size: 2.5vw;
+            animation-name: moveleft;
+            animation-duration: 60s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-timing-function: linear;
+        }
+        canvas#MainFrame {
+            position: fixed;
+            z-index: 5;
+            width: 90vw;
+            height: 67.5vh;
+            background-color: rgb(255, 255, 255);
+            top: 18.85vh;
+            left: 5vw;
+            border-radius: 5vw;
+        }
+        canvas#detailButton {
+            position: fixed;
+            z-index: 6;
+            width: 90vw;
+            background-color: rgb(10, 96, 220);
+            height: 6.85vh;
+            left: 5vw;
+            bottom: 13.7vh;
+            border-bottom-left-radius: 5vw;
+            border-bottom-right-radius: 5vw;
+            
+        }
+        p#detailText {
+            position: fixed;
+            z-index: 7;
+            width: 100vw;
+            height: 6.85vh;
+            left: 0vw;
+            bottom: 9.5vh;
+            color: white;
+            font-size: 4vw;
+            text-align: center;
+        }
+        img#human {
+            position: fixed;
+            z-index: 7;
+            width: 37.5vw;
+            height: 22.85vh;
+            left: 31.25vw;
+            top: 24.56vh;
+        }
+        img#qr {
+            position: fixed;
+            z-index: 7;
+            width: 28.75vw;
+            right: 12.5vw;
+            top: 49.7vh;
+        }
+        p#birthday {
+            position: fixed;
+            top: 54.25vh;
+            z-index: 10;
+            left: 10vw;
+            width: 40vw;
+            font-size: 4vw;
+            font-weight: 700;
+        }
+        p#birthday2 {
+            position: fixed;
+            top: 57.25vh;
+            z-index: 10;
+            left: 15vw;
+            width: 40vw;
+            font-size: 4vw;
+            font-weight: 700;
+        }
+        p#username {
+            position: fixed;
+            top: 48.7vh;
+            z-index: 10;
+            width: 17.5vw;
+            left: 10vw;
+            font-weight: bolder;
+            font-size: 5.8vw;
+            font-family: 'Pretendard';
+        }
+        p#username2 {
+            position: fixed;
+            top: 51.7vh;
+            z-index: 10;
+            width: 17.5vw;
+            left: 15vw;
+            font-weight: bolder;
+            font-size: 5.8vw;
+            font-family: 'Pretendard';
+        }
+        p#local {
+            position: fixed;
+            font-family: 'Pretendard';
+            top: 58vh;
+            z-index: 10;
+            left: 10vw;
+            width: 30vw;
+            font-size: 4vw;
+            font-weight: 500;
+        }
+        p#local2 {
+            position: fixed;
+            font-family: 'Pretendard';
+            top: 61vh;
+            z-index: 10;
+            left: 15vw;
+            width: 70vw;
+            font-size: 4vw;
+            font-weight: 500;
+        }
+        p#sign {
+            position: fixed;
+            font-family: 'Pretendard';
+            top: 75.5vh;
+            z-index: 10;
+            text-align: center;
+            left: 0vw;
+            width: 100vw;
+            font-size: 5vw;
+            font-weight: 400;
+        }
+        p#day {
+            position: fixed;
+            font-family: 'Pretendard';
+            top: 72vh;
+            z-index: 10;
+            left: 0vw;
+            width: 100vw;
+            text-align: center;
+            font-size: 4vw;
+            font-weight: 500;
+        }
+        canvas#backbar {
+            position: fixed;
+            z-index: 11;
+            background-color: rgb(238,238,238);
+            border-radius: 50vh;
+            width: 75vw;
+            left: 12.5vw;
+            height: 0.5vh;
+            top: 67.42vh;
+        }
+        canvas#mainbar {
+            position: fixed;
+            background-color: rgb(4, 95, 220);
+            z-index: 12;
+            border-top-left-radius: 50vh;
+            border-bottom-left-radius: 50vh;
+            left: 12.5vw;
+            height: 0.5vh;
+            top: 67.42vh;
+            animation-name: bar;
+            animation-duration: 30s;
+            animation-iteration-count: 1;
+            animation-direction: alternate;
+            animation-timing-function: linear;
+        }
+        p#lefttime {
+            position: fixed;
+            z-index: 13;
+            color: rgb(101, 164, 226);
+            font-family: 'Pretendard';
+            bottom: 26.85vh;
+            left: 12.5vw;
+            width: 30vw;
+            font-size: 3.75vw;
+            font-weight: 400;
+        }
+        p#lefttimenum {
+            position: fixed;
+            z-index: 13;
+            color: rgb(101, 164, 226);
+            font-family: 'Pretendard';
+            bottom: 26.85vh;
+            left: 80vw;
+            width: 30vw;
+            font-size: 3.75vw;
+            font-weight: 400;
+        }
+        p#qrtext {
+            position: fixed;
+            z-index: 13;
+            color: rgb(149,149,149);
+            font-family: 'Pretendard';
+            bottom: 23vh;
+            left: 0vw;
+            width: 100vw;
+            font-size: 3.5vw;
+            font-weight: 400;
+            text-align: center;
+        }
+        img#menuicon {
+            position: fixed;
+            z-index: 5;
+            width: 6.25vw;
+            top: 9.7vh;
+            right: 3.5vw;
+        }
+        canvas#intro {
+            background-color: white;
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            left: 0vw;
+            top: 0vh;
+            color: white;
+            z-index: 150;
+        }
+
+        img#logo24 {
+            width: 15vw;
+            left: 42.7vw;
+            top: 46vh;
+            z-index: 150;
+            position: fixed;
+        }
+
+        p#logo24txt {
+            position: fixed;
+            z-index: 150;
+            color: rgba(0, 0, 0, 0.722);
+            font-family: 'Pretendard';
+            bottom: 10vh;
+            left: 44.5vw;
+            width: 30vw;
+            font-size: 5vw;
+            font-weight: 500;
+        }
+    </style>
+    <head>
+        
+    </head>
+
+    <body>
+        <div>
+            <canvas id="MainBackground"></canvas>
+            <canvas id="ServeBackground"></canvas>
+        </div>
+       <div>
+        <img src="./govern.png" id="logo">
+        <p id="logoText">주민등록증모바일확인서비스</p>
+        <img src="./menu.png" id="menuicon">
+       </div>
+       <div>
+        <canvas id="captureNo"></canvas>
+        <p id="text1">캡처방지 시스템이 작동 중입니다. 캡처방지 시스템이 작동 중입니다. 캡처방지 시스템이 작동 중입니다. 캡처방지 시스템이 작동 중입니다. 캡처방지 시스템이 작동 중입니다. 캡처방지 시스템이 작동 중입니다. 캡처방지 시스템이 작동 중입니다. 캡처방지 시스템이 작동 중입니다. 캡처방지 시스템이 작동 중입니다. 캡처방지 시스템이 작동 중입니다. 캡처방지 시스템이 작동 중입니다. 캡처방지 시스템이 작동 중입니다. 캡처방지 시스템이 작동 중입니다. 캡처방지 시스템이 작동 중입니다. 캡처방지 시스템이 작동 중입니다. 캡처방지 시스템이 작동 중입니다. 캡처방지 시스템이 작동 중입니다. 캡처방지 시스템이 작동 중입니다. 캡처방지 시스템이 작동 중입니다. 캡처방지 시스템이 작동 중입니다. 캡처방지 시스템이 작동 중입니다. 캡처방지 시스템이 작동 중입니다. 캡처방지 시스템이 작동 중입니다. 캡처방지 시스템이 작동 중입니다. </p>
+       </div>
+       <div>
+        <canvas id="MainFrame"></canvas>
+        <canvas id="detailButton"></canvas>
+        <p id="detailText" onclick="onClickedDetail();">상세정보 표시</p>
+        <img id="human" src="./jay.jpeg">
+        <img id="qr" src="./Loading_icon.gif">
+        <p id="username">지세희</p>
+        <p id="birthday">060712-4153519</p>
+        <p id="local">인천광역시 연수구</p>
+        <p id="lefttime">남은시간</p>
+        <p id="lefttimenum">30초</p>
+        <p id="qrtext">QR코드를 리더기에 스캔하세요</p>
+        <p id="username2">지세희</p>
+        <p id="birthday2">060712-4153519</p>
+        <p id="local2">인천광역시 연수구 청학동 480-8(청학동)</p>
+        <p id="day">20.01.04</p>
+        <p id="sign">인천광역시청</p>
+        <canvas id="intro"></canvas>
+        <img id="logo24" src="./logo24.png">
+        <canvas id="backbar"></canvas>
+        <canvas id="mainbar"></canvas>
+        <p id="logo24txt">정부24</p>
+
+        <style>
+            .fade {
+            transition: opacity 0.12s ease, visibility 0s linear 0.12s;
+            opacity: 1;
+            visibility: visible;
+            }
+
+            /* 사라지는 상태 */
+            .fade.hidden {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.12s ease, visibility 0s linear 0.12s;
+            }
+
+            /* 나타나는 상태 */
+            .fade.visible {
+            opacity: 1;
+            visibility: visible;
+            transition: opacity 0.12s ease, visibility 0s linear 0s; /* 바로 visibility visible */
+            }
+        </style>
+        <script>
+            setTimeout(() => {
+                document.getElementById("logo24").className = "fade";
+                document.getElementById("logo24txt").className = "fade";
+                document.getElementById("logo24").classList.add("hidden");
+                document.getElementById("logo24txt").classList.add("hidden");
+                document.getElementById("intro").className = "fade";
+                document.getElementById("intro").classList.add("hidden");
+            }, 1000);
+            function getTodayDate() {
+                const today = new Date();
+                const year = String(today.getFullYear()).slice(2); // 연도 뒤 두 자리
+                const month = String(today.getMonth() + 1).padStart(2, '0'); // 월 (0부터 시작해서 +1), 두 자리 맞춤
+                const day = String(today.getDate()).padStart(2, '0'); // 일, 두 자리 맞춤
+
+                return `${year}.${month}.${day}`;
+            }
+            document.getElementById("day").innerText = getTodayDate();
+
+            let visibleList = [
+                    document.getElementById("birthday2"),
+                    document.getElementById("username2"),
+                    document.getElementById("local2"),
+                    document.getElementById("sign"),
+                    document.getElementById("day")
+            ]
+                for (let i=0; i<visibleList.length; i++) {
+                    let target = visibleList[i];
+                    target.className = "fade";
+                    target.classList.add("hidden");
+                }
+                
+            setTimeout(() => {
+                document.getElementById("mainbar").style.width = "0vw";
+                document.getElementById("qrtext").innerText = "시간이 만료되었어요. 다시 로그인해주세요.";
+                document.getElementById("qrtext").style.color = "rgb(255,0,0)";
+            }, 30000);
+            setTimeout(() => {
+                let qr = document.getElementById("qr")
+                qr.src = "./blur.jpg"
+                setTimeout(() => {
+                    qr.src = "./qrcode.jpg"
+                }, 500);
+            }, 2500);
+
+            function onClickedDetail() {
+                let fadeoutList = [
+                    document.getElementById("detailButton"),
+                    document.getElementById("qrtext"),
+                    document.getElementById("mainbar"),
+                    document.getElementById("backbar"),
+                    document.getElementById("lefttime"),
+                    document.getElementById("lefttimenum"),
+                    document.getElementById("local"),
+                    document.getElementById("username"),
+                    document.getElementById("birthday"),
+                    document.getElementById("qr")
+
+                ]
+
+                
+                
+                for (let i=0; i<fadeoutList.length; i++) {
+                    let target = fadeoutList[i];
+                    target.className = "fade";
+                    target.classList.add("hidden");
+                }
+
+                setTimeout(() => {
+                    for (let i=0; i<visibleList.length; i++) {
+                    let target = visibleList[i];
+                    target.className = "fade";
+                    target.classList.add("visible");
+                }
+                }, 100);
+
+                setTimeout(() => {
+                    
+
+
+                for (let i=0; i<visibleList.length; i++) {
+                    let target = visibleList[i];
+                    target.className = "fade";
+                    target.classList.add("hidden");
+                }
+                setTimeout(() => {
+                    for (let i=0; i<fadeoutList.length; i++) {
+                    let target = fadeoutList[i];
+                    target.className = "fade";
+                    target.classList.add("visible");
+
+
+                }
+                }, 100);
+                }, 5000);
+                // detailBtn1.style.display = "none";
+                // qrTxt.style.display = "none";
+                // mainBar.style.display = "none";
+                // backBar.style.display = "none";
+                // lefttime.style.display = "none";
+                // lefttimeNum.style.display = "none";
+                // qr.style.display = "none";
+                // local.style.display = "none";
+                // username.style.display = "none";
+                // birthday.style.display = "none";
+            }
+        </script>
+       </div>
+    </body>
+</html>
